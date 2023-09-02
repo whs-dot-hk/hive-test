@@ -16,5 +16,10 @@ in {
       cell.homeProfiles.test
     ];
     _module.args.user = user;
+    home = rec {
+      homeDirectory = "/home/${username}";
+      stateVersion = "23.05";
+      username = user.username;
+    };
   };
 }
